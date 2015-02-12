@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_margin="10dp">
+    
+    <TextView 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:text="@string/enter_filename"/>
+    <EditText 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:inputType="textNoSuggestions"
+        android:id="@+id/edittext_filename" 
+        android:imeOptions="actionDone"/>
+    <TextView 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:id="@+id/textview_filename_warning"
+        android:text="@string/illegal_filename" 
+        android:textColor="#BB0000" 
+        android:visibility="invisible" />
+
+    <RadioGroup 
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent" 
+        android:id="@+id/radiogroup_write_mode">
+        
+        <RadioButton 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/enter_bytes" 
+            android:id="@+id/radiobutton_byte_write_mode" />
+         <LinearLayout 
+             android:orientation="horizontal" 
+             android:layout_width="match_parent" 
+             android:layout_height="wrap_content" >
+        	<EditText 
+        	    android:layout_width="wrap_content" 
+        	    android:layout_height="wrap_content" 
+        	    android:inputType="number"
+        	    android:layout_weight="1" 
+        	    android:layout_gravity="right" 
+        	    android:id="@+id/edittext_bytes" 
+        	    android:imeOptions="actionDone"/>
+        	<TextView 
+        	    android:layout_width="wrap_content" 
+        	    android:layout_height="wrap_content" 
+        	    android:text="@string/bytesUnit"
+        	    android:layout_weight="1" 
+        	    android:layout_gravity="left" />
+         </LinearLayout>
+         
+        <RadioButton 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:text="@string/enter_time" 
+            android:id="@+id/radiobutton_time_write_mode"/>
+        
+        <LinearLayout 
+            android:orientation="horizontal" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content">
+            <EditText 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:inputType="number"
+                android:layout_weight="1" 
+                android:id="@+id/edittext_write_min" 
+                android:imeOptions="actionNext"/>
+            <TextView 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="@string/minUnits"
+                android:layout_weight="1"/>
+            <EditText 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:inputType="number"
+                android:layout_weight="1" 
+                android:id="@+id/edittext_write_sec" 
+                android:imeOptions="actionDone"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/secUnits"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        
+        <RadioButton 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/enter_until_off" 
+            android:id="@+id/radiobutton_continuous_write_mode"/>
+        
+    </RadioGroup>
+
+</LinearLayout>

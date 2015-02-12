@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accelX">#880000</color>
+    <color name="accelYAndMag">#BB0000</color>
+    <color name="accelZ">#FF0000</color>
+    
+    <color name="gyroX">#008800</color>
+    <color name="gyroYAndMag">#00BB00</color>
+    <color name="gyroZ">#00FF00</color>
+    
+    <color name="compassX">#000088</color>
+    <color name="compassYAndMag">#0000BB</color>
+    <color name="compassZ">#0000FF</color>
+    
+    <color name="background">#FFFFFF</color>
+    <color name="live_graph">#F0F0F0</color>
+</resources>

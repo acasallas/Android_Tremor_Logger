@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center|top"
+    android:orientation="horizontal">
+    
+    <!-- LEFT SECTION -->
+
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:layout_width="wrap_content" 
+        android:layout_height="match_parent"
+        android:minWidth="200dp">
+        
+        <TextView
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/data_output_header"
+        	android:paddingLeft="20dp"
+        	android:paddingTop="20dp"/>
+        
+    	<Button
+        	android:id="@+id/bt_button_1"
+        	style="@style/wrapAndCenter"
+        	android:minWidth="150dp"/>
+    
+    	<LinearLayout
+	    	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:gravity="center">
+		    <Button
+		        android:id="@+id/write_text_button"
+		        style="@style/wrapAndCenter"
+	            android:text="@string/write_file_button"
+	            android:layout_weight="1"/>
+		    <LinearLayout 
+		        android:layout_weight="1"
+		        android:layout_width="wrap_content" 
+		        android:layout_height="match_parent" 
+		        android:orientation="vertical" 
+		        android:minWidth="50dp"
+		    	android:background="@drawable/background_rectangle">
+		     	<TextView
+		         	android:id="@+id/textview_write_quantity"
+		         	style="@style/wrapAndCenter"/>
+		     	<TextView
+		         	android:id="@+id/textview_write_type"
+		         	style="@style/wrapAndCenter"/>
+		    </LinearLayout>  
+    	</LinearLayout>
+    
+    	<TextView
+	        android:id="@+id/textview_write_status"
+	        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#DD0000"/>
+    	
+    	<Button
+            android:id="@+id/graph_options_button"
+            style="@style/wrapAndCenter"
+            android:text="@string/graph_options"/>
+    
+    	<LinearLayout
+	    	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:gravity="center">
+	        <TextView
+	        	android:text="@string/data_output_stream"
+	        	style="@style/wrapAndCenter"/>
+		    <ToggleButton
+	        	android:id="@+id/toggleButton1"
+	        	style="@style/wrapAndCenter"/>
+	    </LinearLayout>
+    </LinearLayout>
+    
+    <!-- RIGHT (OUTPUT) SIDE -->
+    <FrameLayout 
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent">
+        
+        <!-- DEBUG MODE VIEW -->
+        
+        <TextView
+        	android:id="@+id/bt_output_textview"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:background="#EEEEEE"
+        	android:layout_margin="20dp"/>
+        
+        <!-- CURRENT STATE MODE -->
+        
+        <TableLayout 
+            android:orientation="vertical" 
+            android:layout_height="match_parent" 
+            android:layout_width="match_parent"
+            android:layout_margin="20dp" 
+            android:id="@+id/counters_table">
+
+            <TableRow android:background="#DDDDDD">
+                <TextView 
+                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                    android:layout_weight="2"  />
+                <TextView 
+                    style="@style/wrapAndCenter" 
+                    android:text="@string/X"
+                    android:layout_weight="1"/>
+                <TextView 
+                    style="@style/wrapAndCenter" 
+                    android:text="@string/Y"
+                    android:layout_weight="1"/>
+                <TextView 
+                    style="@style/wrapAndCenter" 
+                    android:text="@string/Z"
+                    android:layout_weight="1"/>
+            </TableRow>
+            
+ 			<TableRow android:layout_weight="1" android:background="#CCCCCC">
+ 			    <TextView 
+ 			        android:layout_width="wrap_content" 
+ 			        android:layout_height="wrap_content" 
+ 			        android:text="@string/accelAndUnits"
+                    android:layout_gravity="center" 
+                    android:textStyle="bold" 
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"/>
+ 			    <TextView 
+                    android:id="@+id/accel_counter_x" 
+ 			        style="@style/currentModeCounter"
+ 			        android:layout_weight="1" 
+                    android:textColor="@color/accelYAndMag" />
+ 			    <TextView 
+ 			        android:id="@+id/accel_counter_y"
+ 			        style="@style/currentModeCounter"
+ 			        android:layout_weight="1" 
+                    android:textColor="@color/accelYAndMag"/>
+ 			    <TextView
+ 			        android:id="@+id/accel_counter_z" 
+ 			        style="@style/currentModeCounter"
+ 			        android:layout_weight="1" 
+                    android:textColor="@color/accelYAndMag"/>
+ 			</TableRow>
+
+ 			<TableRow android:layout_weight="1" android:background="#DDDDDD">
+
+ 			    <TextView 
+ 			        android:text="@string/gyroAndUnits"
+ 			        android:layout_width="wrap_content" 
+ 			        android:layout_height="wrap_content" 
+                    android:layout_gravity="center" 
+                    android:textStyle="bold" 
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"/>
+ 			    <TextView
+ 			        android:id="@+id/gyro_counter_x"
+ 			        style="@style/currentModeCounter"
+ 			        android:layout_weight="1"
+                    android:textColor="@color/gyroYAndMag" />
+ 			    <TextView
+ 			        android:id="@+id/gyro_counter_y"
+ 			        style="@style/currentModeCounter"
+ 			        android:layout_weight="1"
+                    android:textColor="@color/gyroYAndMag" />
+ 			    <TextView
+ 			        android:id="@+id/gyro_counter_z"
+ 			        style="@style/currentModeCounter"
+ 			        android:layout_weight="1"
+                    android:textColor="@color/gyroYAndMag" />
+ 			</TableRow>
+ 			
+ 			<TableRow android:layout_weight="1" android:background="#CCCCCC">
+ 			    <TextView 
+ 			        android:layout_width="wrap_content" 
+ 			        android:layout_height="wrap_content"
+ 			        android:text="@string/compassAndUnits"
+                    android:layout_gravity="center" 
+                    android:textStyle="bold" 
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"/>
+ 			    <TextView
+                    android:id="@+id/compass_counter_x"
+ 			        style="@style/currentModeCounter" 
+                    android:layout_weight="1" 
+                    android:textColor="@color/compassYAndMag" />
+ 			    <TextView
+ 			        android:id="@+id/compass_counter_y"
+ 			        style="@style/currentModeCounter"
+					android:layout_weight="1"
+                    android:textColor="@color/compassYAndMag"/>
+ 			    <TextView
+                    android:id="@+id/compass_counter_z"
+                    style="@style/currentModeCounter"
+ 			        android:layout_weight="1" 
+                    android:textColor="@color/compassYAndMag"/>
+ 			</TableRow>
+ 			
+        </TableLayout>
+        
+        <!-- LIVE GRAPH VIEW -->
+        
+        <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" 
+            android:layout_margin="20dp" 
+            android:orientation="vertical" 
+            android:id="@+id/live_graph_layout">
+            <LinearLayout 
+                android:orientation="horizontal" 
+                android:layout_width="fill_parent" 
+                android:baselineAligned="false"
+                android:layout_height="wrap_content" 
+                android:layout_marginBottom="0dp" >
+            	<LinearLayout style="@style/wrapAndCenter" android:layout_weight="1">
+            	    <TextView 
+            	        style="@style/liveGraphHeader"
+                    	android:text="@string/accel"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/accelX" 
+                	 	android:text="@string/X"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/accelYAndMag" 
+                	 	android:text="@string/Y"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/accelZ" 
+                	 	android:text="@string/Z"/>
+            	</LinearLayout>
+                <LinearLayout style="@style/wrapAndCenter" android:layout_weight="1" >
+            	    <TextView 
+            	        style="@style/liveGraphHeader"  
+                    	android:text="@string/gyro"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/gyroX" 
+                	 	android:text="@string/X"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/gyroYAndMag" 
+                	 	android:text="@string/Y"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/gyroZ" 
+                	 	android:text="@string/Z"/>
+            	</LinearLayout>
+            	<LinearLayout style="@style/wrapAndCenter" android:layout_weight="1" >
+            	    <TextView 
+            	        style="@style/liveGraphHeader"
+                    	android:text="@string/compass"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/compassX" 
+                	 	android:text="@string/X"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/compassYAndMag"
+                	 	android:text="@string/Y"/>
+                	<TextView 
+                	    style="@style/liveGraphHeader"
+                	 	android:textColor="@color/compassZ" 
+                	 	android:text="@string/Z"/>
+            	</LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:orientation="horizontal" 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" >
+            	<TextView 
+            	    style="@style/smallText.centered"
+                	android:layout_weight="1" 
+                	android:id="@+id/textview_max_accel"
+                	android:textColor="@color/accelYAndMag"/>
+            	<TextView 
+            	    style="@style/smallText.centered" 
+            	    android:layout_weight="1"
+                	android:id="@+id/textview_max_gyro"
+                	android:textColor="@color/gyroYAndMag"/>
+            	<TextView 
+            	    style="@style/smallText.centered" 
+            	    android:layout_weight="1" 
+            	    android:id="@+id/textview_max_compass"
+            		android:textColor="@color/compassYAndMag"/>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:background="@color/live_graph">
+                <TextView 
+                    style="@style/smallText"  
+                    android:layout_weight="1" 
+                    android:layout_gravity="left"
+                    android:id="@+id/textview_graphtime_1"/>
+                <TextView 
+                    style="@style/smallText.centered"  
+                    android:layout_weight="2"
+                    android:id="@+id/textview_graphtime_2" />
+                <TextView 
+                    style="@style/smallText.centered" 
+                    android:layout_weight="2" 
+                    android:id="@+id/textview_graphtime_3"
+                    />
+                <TextView 
+                    style="@style/smallText.centered" 
+                    android:layout_weight="2" 
+                    android:id="@+id/textview_graphtime_4"
+                     />
+                <TextView 
+                    style="@style/smallText" 
+                    android:layout_weight="1"  
+                    android:layout_gravity="right"
+                    android:id="@+id/textview_graphtime_5" 
+                    android:gravity="right"/>
+            </LinearLayout>
+            
+            <edu.washington.ee.blr.closedloopdbs.LiveGraphView 
+                android:id="@+id/live_graph"
+                android:layout_width="match_parent" 
+                android:layout_height="match_parent"/>
+            
+        </LinearLayout>
+        
+    </FrameLayout>
+    
+</LinearLayout>

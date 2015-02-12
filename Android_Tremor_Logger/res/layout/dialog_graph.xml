@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:layout_margin="10dp" >
+
+    
+    <RadioGroup 
+        android:orientation="vertical" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:id="@+id/radiogroup_graph_options_fragment">
+        <RadioButton 
+            android:text="@string/current_state" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" 
+            android:layout_marginLeft="10dp" 
+            android:textSize="20sp" 
+            android:id="@+id/radiobutton_int"/>
+        <RadioButton 
+            android:text="@string/debug_mode" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:textStyle="bold" 
+            android:layout_marginLeft="10dp" 
+            android:textSize="20sp" 
+            android:id="@+id/radiobutton_raw"/>
+        <RadioButton 
+            android:text="@string/live_graph" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:textStyle="bold" 
+            android:layout_marginLeft="10dp" 
+            android:textSize="20sp"
+            android:id="@+id/radiobutton_graph" />
+    </RadioGroup>
+    
+    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" >
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox
+		        android:id="@+id/checkbox_accel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/accelerometer" 
+		        android:layout_marginLeft="5dp"
+		        android:enabled="false"/>
+			    <CheckBox
+			        android:id="@+id/checkbox_gyro"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/gyroscope" 
+			        android:layout_marginLeft="5dp"
+			        android:enabled="false"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+             <CheckBox
+			        android:id="@+id/checkbox_compass"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/compass" 
+			        android:layout_marginLeft="5dp"
+			        android:enabled="false"/>
+              <CheckBox
+		        android:id="@+id/checkbox_magnitude"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/magnitudes" 
+		        android:layout_marginLeft="5dp"
+		        android:enabled="false"/>
+        </TableRow>
+    </TableLayout>
+    
+    
+    <LinearLayout 
+        android:orientation="horizontal" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" >
+    	<TextView 
+    	    android:layout_width="wrap_content" 
+    	    android:layout_height="wrap_content" 
+    	    android:text="@string/packets_to_show" 
+    	    android:layout_marginLeft="10dp" 
+    	    android:layout_marginRight="10dp"
+    	    android:id="@+id/textview_timeToShow"/>
+    	<EditText
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:inputType="number" 
+            android:id="@+id/edittext_timeToShow" />
+    </LinearLayout>
+        
+        
+        
+        
+        
+   
+    
+
+    
+
+</LinearLayout>

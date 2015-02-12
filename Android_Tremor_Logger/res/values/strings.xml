@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android Tremor Logger</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_title">DBS Bluetooth\nInterface App</string>
+    <string name="bt_button_text">Connect to Bluetooth&#x2026;</string>
+    <string name="view_data_text">Begin &#x003E;</string>
+    
+    <!-- Intro Activity strings -->
+    <string name="uw_logo_desc">UW Logo</string>
+    
+    <!-- Data output Activity strings -->
+    <string name="data_output_header">SELECTED DEVICE: </string>
+    <string name="write_file_button">Write to file&#x2026;</string>
+    <string name="data_output_stream">Data Stream: </string>
+    <string name="graph_options">Graph Options</string>
+    <string name="X">X</string>
+    <string name="Y">Y</string>
+    <string name="Z">Z</string>
+    <string name="accelAndUnits">Accel (g)</string>
+    <string name="gyroAndUnits">Gyro (deg/s)</string>
+    <string name="compassAndUnits">Compass (uT)</string>
+    <string name="accel">Accel</string>
+    <string name="gyro">Gyro</string>
+    <string name="compass">Compass</string>
+    
+    <!-- Bluetooth Activity strings -->
+    <string name="bt_page_top_message">Select a device from those already paired below&#x2026;</string>
+    <string name="bt_page_bottom_message">&#x2026;or scan and pair another device.</string>
+    
+    <!-- Connecting Dialog strings -->
+    <string name="connecting">Connecting&#x2026;</string>
+    
+    <!-- Graph Dialog strings -->
+    <string name="current_state">Current State Mode</string>
+    <string name="debug_mode">Debug Mode</string>
+    <string name="live_graph">Live Graph</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="magnitudes">Magnitudes Only</string>
+    <string name="packets_to_show">Packets To Show: </string>
+    
+    <!-- Write File Dialog strings -->
+    <string name="enter_filename">Enter filename or leave blank:</string>
+    <string name="illegal_filename">Illegal Filename Characters</string>
+    <string name="enter_bytes">Number of Bytes: </string>
+    <string name="enter_time">Time to Write: </string>
+    <string name="enter_until_off">Until \'OFF\' is Toggled</string>
+    <string name="bytesUnit">bytes</string>
+    <string name="minUnits">min</string>
+    <string name="secUnits">sec</string>
+    
+
+</resources>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity ="center" 
+    tools:context="edu.washington.ee.blr.closedloopdbs.IntroActivity"
+    android:background="@color/background" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="175dp"
+        android:src="@drawable/uw_logo"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp"
+        android:contentDescription="@string/uw_logo_desc"
+        />
+
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:gravity="center"
+        android:textSize="34sp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:textStyle="bold"
+        
+         />
+     <Button
+            android:id="@+id/do_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_data_text"
+            android:textSize="20sp"
+            android:layout_margin="25dp"
+            />
+
+</LinearLayout>
